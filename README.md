@@ -25,3 +25,4 @@ A simple 3D web application built with **Three.js** that allows users to create,
 2. Open index.html in a browser (CDN-based, no setup required).
 
 ## 📷 Preview
+![image](https://github.com/user-attachments/assets/d9d88d3a-b398-4a08-a0de-1d377ff4183e)
