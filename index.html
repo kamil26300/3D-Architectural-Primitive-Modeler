@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Architectural Primitive Modeler</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+
+<body>
+  <div id="ui">
+    <label for="shape">Shape:</label>
+    <select id="shape">
+      <option value="cube">Cube</option>
+      <option value="cylinder">Cylinder</option>
+      <option value="sphere">Sphere</option>
+    </select>
+    <button onclick="addShape()">Add Shape</button>
+    <button onclick="removeLastShape()">Remove Last</button>
+    <p id="selectedInfo">Selected Object: None</p>
+    <div id="controls">
+      <h3>Move Object</h3>
+      <div style="display: flex; width: 100%; justify-content: space-around;">
+        <div id="wasd" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <div style="display: flex; justify-content: center;">
+            <button onclick="moveSelectedObject('forward')">W</button>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <button onclick="moveSelectedObject('left')">A</button>
+            <button onclick="moveSelectedObject('backward')">S</button>
+            <button onclick="moveSelectedObject('right')">D</button>
+          </div>
+        </div>
+        <div id="up-down" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <button onclick="moveSelectedObject('up')">Shift + W</button>
+          <button onclick="moveSelectedObject('down')">Shift + S</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
